@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Katalog Portalı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sol-kutu">
+        <div class="arama-alani">
+            <p class="arama-etiket">GÖRÜNÜM</p>
+            <button id="mode-toggle" style="cursor:pointer; background:none; border:1px solid #c0392b; padding:10px; width:100%;">
+                <span class="buton-rengi" style="color:#c0392b; font-weight:bold;">SİYAH-BEYAZ MOD</span>
+            </button>
+            
+            <p class="arama-etiket" style="margin-top:30px;">API ARA</p>
+            <input type="text" id="search-bar" placeholder="İsim yazın...">
+        </div>
+    </div>
+
+    <div class="ana-icerik">
+        <header>
+            <h1 class="ana-baslik">API KATALOĞU</h1>
+            <p class="katalog-aciklama">Modern API Rehberi</p>
+        </header>
+
+        <hr class="ayirici-cizgi">
+
+        <div id="loading" class="durum-mesaji">YÜKLENİYOR...</div>
+        <div id="Sonuç-yok" class="Sonuç-yok">SONUÇ BULUNAMADI!</div>
+
+        <main id="api-container" class="hizalayici"></main>
+
+        <section class="bilgi-bolumu">
+            <h2>HAKKIMIZDA</h2>
+            <p>API Guru verileriyle hazırlanan modern katalog.</p>
+        </section>
+
+        <footer class="footer">
+            <p>2025 - Tüm hakları saklıdır</p>
+        </footer>
+    </div>
+
+    <div id="overlay" onclick="detayKapat()"></div>
+    <div id="detay-paneli">
+        <h2 id="detay-baslik"></h2>
+        <p id="detay-aciklama"></p>
+        <button onclick="detayKapat()" style="padding:10px 20px; cursor:pointer;">KAPAT</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
